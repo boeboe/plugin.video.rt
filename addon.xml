@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.rt" name="Russia Today News" version="3.0.6" provider-name="t1m, Boeboe">
+<addon id="plugin.video.rt" name="Russia Today News" version="3.0.6" provider-name="t1m and boeboe">
 	<requires>
 		<import addon="xbmc.python" version="2.26.0" />
 		<import addon="script.module.t1mlib" version="1.0.18" />
@@ -18,6 +18,16 @@
 		<forum>http://forum.kodi.tv/showthread.php?tid=173448</forum>
 		<website>http:www.rt.com</website>
 		<source>https://github.com/boeboe/plugin.video.rt</source>
+		<news>[B]CGTN ChangeLog v3.0.6 - Changelog - 2019-12-04[/B]
+3.0.6 regex updates, upstep and adjust youtube call, adjust arab live url, add banner, adjust fanart (boeboe)
+3.0.5 minor website change (t1m)
+3.0.4 added YT playback (t1m)
+3.0.3 added French feed (t1m)
+3.0.2 added Spanish and Arab live feeds that I forgot (t1m)
+3.0.1 clean up and fix live feeds (t1m)
+2.0.2 website chnages (t1m)
+2.0.1 Isengard version - fixed live streams (Isengard)
+		</news>
     <assets>
         <icon>resources/icon.png</icon>
         <fanart>resources/fanart.jpg</fanart>

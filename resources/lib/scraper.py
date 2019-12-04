@@ -23,7 +23,7 @@ class myAddon(t1mAddon):
   def getAddonMenu(self,url,ilist):
       ilist = self.addMenuItem('RT Live','GS', ilist, 'abc' , self.addonIcon, self.addonFanart, None, isFolder=True)
       page = self.getRequest(RTBASE_URL+"/shows/")
-      match = re.compile('<li class="card-rows__item.+?src="(.+?)".+?href="(.+?)">(.+?)<.+?class="link link_disabled".+?>(.+?)</a',re.DOTALL).findall(page)
+      match = re.compile('<li class="card-rows__item.+?src="(http.+?)".+?href="(.+?)">(.+?)<.+?class="link link_disabled".+?>(.+?)</a',re.DOTALL).findall(page)
       for img,url,name,plot in match:
           url = url.strip()
           thumb = img
@@ -32,14 +32,14 @@ class myAddon(t1mAddon):
           name = name.strip()
           infoList['Title'] = name
           infoList['mediatype'] = 'tvshow'
-          infoList['Plot']  = h.unescape(plot.strip().replace('<p>','').replace('</p>','').decode(UTF8))
+          infoList['Plot'] = h.unescape(plot.strip().replace('<p>','').replace('</p>','').decode(UTF8))
           ilist = self.addMenuItem(name,'GE', ilist, url, thumb, fanart, infoList, isFolder=True)
       return(ilist)
 
 
   def getAddonEpisodes(self,url,ilist):
       page = self.getRequest(RTBASE_URL+url)
-      match = re.compile('static-three_med-one">.+?src="(.+?)".+?class="link link_hover" href="(.+?)" >(.+?)<.+?class="card__summary ">(.+?)</',re.DOTALL).findall(page)
+      match = re.compile('static-three_med-one">.+?src="(http.+?)".+?class="link link_hover" href="(.+?)" >(.+?)<.+?class="card__summary ">(.+?)</',re.DOTALL).findall(page)
       for img,url,name,plot in match:
           thumb = img
           fanart = img
@@ -47,7 +47,7 @@ class myAddon(t1mAddon):
           infoList = {}
           infoList['Title'] = name
           infoList['mediatype'] = 'episode'
-          infoList['Plot']  = h.unescape(plot.strip().replace('<p>','').replace('</p>','').decode(UTF8))
+          infoList['Plot'] = h.unescape(plot.strip().replace('<p>','').replace('</p>','').decode(UTF8))
           ilist = self.addMenuItem(name,'GV', ilist, url, thumb, fanart, infoList, isFolder=False)
       return(ilist)
 
@@ -58,7 +58,7 @@ class myAddon(t1mAddon):
                ("https://rtd.rt.com/on-air/", 'Doc'),
                ("https://actualidad.rt.com/en_vivo2", 'ESP'),
                ("https://francais.rt.com/en-direct", "FR"),
-               ("https://arabic.rt.com/static/libs/streams/default.js", "ARAB")]
+               ("https://arabic.rt.com/live/", "ARAB")]
       for url, name in rlist:
           name = name.strip()
           infoList = {}
@@ -82,7 +82,7 @@ class myAddon(t1mAddon):
                if m != None:
                    url = m.group(1)
                else:
-                   m = re.compile("url: '(.+?)'",re.DOTALL).search(html)
+                   m = re.compile('url: "(.+?\.m3u8)"',re.DOTALL).search(html)
                    if m != None:
                        url = m.group(1)
                    else:                   
@@ -100,7 +100,7 @@ class myAddon(t1mAddon):
                        else: 
                            m = re.compile('\/\/www.youtube.com\/embed\/(.+?)"', re.DOTALL).search(html)
                            if m != None:
-                               url = 'plugin://plugin.video.youtube/play/?video_id=%s' % (m.group(1))
+                               url = 'plugin://plugin.video.youtube/play/?video_id=%s' % (m.group(1).split("?")[0])
                            else:
                                return
       else:
