@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.rt" name="Russia Today News" version="3.0.6" provider-name="t1m|boeboe">
+<addon id="plugin.video.rt" name="Russia Today News" version="3.0.7" provider-name="t1m|boeboe">
 	<requires>
 		<import addon="xbmc.python" version="2.26.0" />
 		<import addon="script.module.t1mlib" version="1.0.18" />
@@ -18,7 +18,8 @@
 		<forum>http://forum.kodi.tv/showthread.php?tid=173448</forum>
 		<website>http:www.rt.com</website>
 		<source>https://github.com/boeboe/plugin.video.rt</source>
-		<news>[B]CGTN ChangeLog v3.0.6 - Changelog - 2019-12-04[/B]
+		<news>[B]CGTN ChangeLog v3.0.7 - Changelog - 2019-12-04[/B]
+3.0.7 added screenshots and pipe to add multiple devs as recommended
 3.0.6 regex updates, upstep and adjust youtube call, adjust arab live url, add banner, adjust fanart (boeboe)
 3.0.5 minor website change (t1m)
 3.0.4 added YT playback (t1m)
@@ -32,7 +33,22 @@
         <icon>resources/icon.png</icon>
         <fanart>resources/fanart.jpg</fanart>
         <banner>resources/banner.png</banner>
-        <!-- <screenshot>resources/screenshot-1.png</screenshot> -->
+        <screenshot>resources/screenshots/screenshot-1.png</screenshot>
+        <screenshot>resources/screenshots/screenshot-2.png</screenshot>
+        <screenshot>resources/screenshots/screenshot-3.png</screenshot>
+        <screenshot>resources/screenshots/screenshot-4.png</screenshot>
+        <screenshot>resources/screenshots/screenshot-5.png</screenshot>
+        <screenshot>resources/screenshots/screenshot-6.png</screenshot>
+        <screenshot>resources/screenshots/screenshot-7.png</screenshot>
+        <screenshot>resources/screenshots/screenshot-8.png</screenshot>
+        <screenshot>resources/screenshots/screenshot-9.png</screenshot>
+        <screenshot>resources/screenshots/screenshot-10.png</screenshot>
+        <screenshot>resources/screenshots/screenshot-11.png</screenshot>
+        <screenshot>resources/screenshots/screenshot-12.png</screenshot>
+        <screenshot>resources/screenshots/screenshot-13.png</screenshot>
+        <screenshot>resources/screenshots/screenshot-14.png</screenshot>
+        <screenshot>resources/screenshots/screenshot-15.png</screenshot>
+        <screenshot>resources/screenshots/screenshot-16.png</screenshot>
     </assets>    
 	</extension>
 </addon>
