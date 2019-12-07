@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.rt" name="Russia Today News" version="3.0.7" provider-name="t1m|boeboe">
+<addon id="plugin.video.rt" name="Russia Today News" version="3.0.8" provider-name="t1m|boeboe">
 	<requires>
-		<import addon="xbmc.python" version="2.26.0" />
-		<import addon="script.module.t1mlib" version="1.0.18" />
+		<import addon="xbmc.python" version="2.20.0" />
 		<import addon="plugin.video.youtube" version="6.5.2" optional="true" />
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="default.py">
@@ -18,7 +17,8 @@
 		<forum>http://forum.kodi.tv/showthread.php?tid=173448</forum>
 		<website>http:www.rt.com</website>
 		<source>https://github.com/boeboe/plugin.video.rt</source>
-		<news>[B]CGTN ChangeLog v3.0.7 - Changelog - 2019-12-04[/B]
+		<news>[B]CGTN ChangeLog v3.0.8 - Changelog - 2019-12-04[/B]
+3.0.8 added first aired date, remove external dep to lib removed from github anymore
 3.0.7 added screenshots and pipe to add multiple devs as recommended
 3.0.6 regex updates, upstep and adjust youtube call, adjust arab live url, add banner, adjust fanart (boeboe)
 3.0.5 minor website change (t1m)

@@ -14,6 +14,7 @@ plugin.video.rt/resources/media/poster_cgtn_arabic.png
 plugin.video.rt/resources/media/poster_cgtn_channels.png
 plugin.video.rt/resources/lib/__init__.py
 plugin.video.rt/resources/lib/scraper.py
+plugin.video.rt/resources/lib/t1mlib.py
 plugin.video.rt/resources/screenshots/screenshot-1.png
 plugin.video.rt/resources/screenshots/screenshot-2.png
 plugin.video.rt/resources/screenshots/screenshot-3.png

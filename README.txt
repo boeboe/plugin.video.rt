@@ -2,6 +2,7 @@ plugin.video.rt
 ================
 Kodi Addon for Russia Today News
 
+3.0.8 added first aired date, remove external dep to lib removed from github
 3.0.7 added screenshots and pipe to add multiple devs as recommended
 3.0.6 regex updates, upstep and adjust youtube call, adjust arab live url, add banner, adjust fanart
 3.0.5 minor website change
